@@ -8,4 +8,16 @@ public class Card {
         this.rank = rank;
     }
 
+    public SuitType getSuit(){
+      return this.suit;
+    }
+
+    public RankType getRank() {
+      return rank;
+    }
+
+//    public int getValueFromEnum(){
+//      return this.rank.getValue();
+//    }
+
 }
