@@ -32,6 +32,15 @@ public class DeckTest {
     }
 
     @Test
+    public void canDealTop(){
+      Card card = new Card(SuitType.HEARTS, RankType.ACE);
+      deck.populateDeck();
+      Card dealtCard = deck.dealCard();
+      assertEquals(card.getSuit(), dealtCard.getSuit());
+      assertEquals(card.getRank(), dealtCard.getRank());
+    }
+
+    @Test
     public void canShuffle(){
       Card card = new Card(SuitType.HEARTS, RankType.ACE);
       deck.populateDeck();
