@@ -29,12 +29,9 @@ public class Deck {
 
     public Card dealCard() {
       return playingCards.remove(0);
+      // add to player
     }
 
-//    public void dealFromDeck() {
-//      this.dealCard();
-//      add to player
-//    }
 
     public void shuffleDeck() {
       Collections.shuffle(this.playingCards);

@@ -22,9 +22,9 @@ public class CardTest {
     assertEquals(RankType.TEN, card.getRank());
   }
 
+  @Test
+  public void tenHasValue10(){
+    assertEquals(10, card.getValueFromEnum());
+  }
 
-//  @Test
-//  public int getValueFromEnum(){
-//    return this.rank.getValue();
-//  }
 }

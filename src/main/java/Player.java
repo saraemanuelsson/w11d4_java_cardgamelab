@@ -20,12 +20,26 @@ private Boolean winner;
     return this.winner;
   }
 
+  public ArrayList<Card> getDealtCards() {
+    return this.dealtCards;
+  }
+
   public int hasCard() {
     return this.dealtCards.size();
   }
 
-// public void receiveCard(C) {
+  public void receiveCard(Deck deck) {
+    Card dealtCard = deck.dealCard();
+    this.dealtCards.add(dealtCard);
+  }
+
+  public void setWinner(){
+    this.winner = true;
+  }
+
+//  public int getValueOfCard(){
 //
-//}
+//  }
+  
 
 }
