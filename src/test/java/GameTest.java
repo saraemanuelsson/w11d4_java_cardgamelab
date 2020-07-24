@@ -30,4 +30,9 @@ public class GameTest {
         assertEquals(3, game.getNumberOfPlayers());
     }
 
+    @Test
+    public void canStartGame(){
+
+    }
+
 }

@@ -30,8 +30,4 @@ public class Deck {
         }
     }
 
-    public Card removeTopCard() {
-      return playingCards.remove(0);
-    }
-
 }
