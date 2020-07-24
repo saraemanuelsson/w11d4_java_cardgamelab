@@ -5,41 +5,16 @@ import static org.junit.Assert.*;
 
 public class PlayerTest {
 
-    private Player player1;
-    private Card card;
+    private Player player;
 
     @Before
     public void before(){
-        player1 = new Player("Alice");
-        card = new Card(SuitType.SPADES, RankType.JACK);
+        player = new Player("Alice");
     }
 
     @Test
     public void hasName(){
-        assertEquals("Alice", player1.getName());
+        assertEquals("Alice", player.getName());
     }
 
-    @Test
-    public void testStartsWithEmptyHand(){
-        assertEquals(0, player1.getNumberOfCards());
-    }
-
-    @Test
-    public void canReceiveCard() {
-        player1.receiveCard(card);
-        assertEquals(1, player1.getNumberOfCards());
-    }
-
-    @Test
-    public void canGetHandOfCards(){
-        player1.receiveCard(card);
-        assertEquals(card, player1.getHandOfCards().get(0));
-    }
-
-    @Test
-    public void canGetTotalValueOfHand(){
-        player1.receiveCard(card);
-        player1.receiveCard(card);
-        assertEquals(20, player1.getTotalValueOfHand());
-    }
 }
