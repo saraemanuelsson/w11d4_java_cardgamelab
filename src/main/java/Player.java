@@ -26,4 +26,12 @@ private String name;
     this.handOfCards.add(card);
   }
 
+  public int getTotalValueOfHand() {
+    int total = 0;
+    for (Card card : this.handOfCards) {
+      total += card.getValueOfCard();
+    }
+    return total;
+  }
+
 }

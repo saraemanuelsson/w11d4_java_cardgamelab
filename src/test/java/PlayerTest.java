@@ -1,8 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.*;
 
 public class PlayerTest {
 
@@ -29,5 +28,18 @@ public class PlayerTest {
     public void canReceiveCard() {
         player1.receiveCard(card);
         assertEquals(1, player1.getNumberOfCards());
+    }
+
+    @Test
+    public void canGetHandOfCards(){
+        player1.receiveCard(card);
+        assertEquals(card, player1.getHandOfCards().get(0));
+    }
+
+    @Test
+    public void canGetTotalValueOfHand(){
+        player1.receiveCard(card);
+        player1.receiveCard(card);
+        assertEquals(20, player1.getTotalValueOfHand());
     }
 }
