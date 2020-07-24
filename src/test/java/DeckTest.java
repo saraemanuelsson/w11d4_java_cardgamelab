@@ -25,17 +25,17 @@ public class DeckTest {
     }
 
     @Test
-    public void canDealFromDeck(){
+    public void canRemoveTopCard(){
         deck.populateDeck();
-        deck.dealCard();
+        deck.removeTopCard();
         assertEquals(51, deck.getNumberOfCards());
     }
 
     @Test
-    public void canDealTop(){
+    public void testRemoveCardUnshuffled(){
       Card card = new Card(SuitType.HEARTS, RankType.ACE);
       deck.populateDeck();
-      Card dealtCard = deck.dealCard();
+      Card dealtCard = deck.removeTopCard();
       assertEquals(card.getSuit(), dealtCard.getSuit());
       assertEquals(card.getRank(), dealtCard.getRank());
     }
@@ -45,7 +45,7 @@ public class DeckTest {
       Card card = new Card(SuitType.HEARTS, RankType.ACE);
       deck.populateDeck();
       deck.shuffleDeck();
-      assertNotSame(card, deck.dealCard());
+      assertNotSame(card, deck.removeTopCard());
     }
 
 }
