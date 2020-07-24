@@ -49,12 +49,4 @@ public class DeckTest {
       assertEquals(card.getRank(), dealtCard.getRank());
     }
 
-    @Test
-    public void canShuffle(){
-      Card card = new Card(SuitType.HEARTS, RankType.ACE);
-      deck.populateDeck();
-      deck.shuffleDeck();
-      assertNotSame(card, deck.removeTopCard());
-    }
-
 }

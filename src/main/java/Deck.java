@@ -34,8 +34,4 @@ public class Deck {
       return playingCards.remove(0);
     }
 
-    public void shuffleDeck() {
-      Collections.shuffle(this.playingCards);
-    }
-
 }
