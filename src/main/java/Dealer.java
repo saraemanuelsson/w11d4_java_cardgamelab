@@ -8,6 +8,12 @@ public class Dealer extends Person {
         this.gameCards = new ArrayList<Card>();
     }
 
+    public void populateGameCards(ArrayList<Deck> decks) {
+        for (Deck deck : decks) {
+            this.gameCards.addAll(deck.getPlayingCards());
+        }
+    }
+
     public int getSizeOfGameCards() {
         return this.gameCards.size();
     }

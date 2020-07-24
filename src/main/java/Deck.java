@@ -5,9 +5,12 @@ public class Deck {
 
     private ArrayList<Card> playingCards;
 
-
     public Deck() {
         this.playingCards = new ArrayList<Card>();
+    }
+
+    public ArrayList<Card> getPlayingCards() {
+        return this.playingCards;
     }
 
     public void addCard(Card card){

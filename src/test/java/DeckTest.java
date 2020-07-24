@@ -25,6 +25,15 @@ public class DeckTest {
     }
 
     @Test
+    public void canGetPlayingCards(){
+        Card card = new Card(SuitType.HEARTS, RankType.ACE);
+        deck.populateDeck();
+        Card sampleCard = deck.getPlayingCards().get(0);
+        assertEquals(card.getSuit(), sampleCard.getSuit());
+        assertEquals(card.getRank(), sampleCard.getRank());
+    }
+
+    @Test
     public void canRemoveTopCard(){
         deck.populateDeck();
         deck.removeTopCard();
