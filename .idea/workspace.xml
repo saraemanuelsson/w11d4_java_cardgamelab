@@ -21,8 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="571d500e-350b-44ec-b2f7-815ef3616ed9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Deck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/DeckTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DeckTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PlayerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,22 +68,12 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DeckTest">
+  <component name="RunManager" selected="JUnit.PlayerTest">
     <configuration name="CardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="w11d4_java_cardgamelab" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CardTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CardTest.queenHasValue10" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="w11d4_java_cardgamelab" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CardTest" />
-      <option name="METHOD_NAME" value="queenHasValue10" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -117,13 +107,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PlayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="w11d4_java_cardgamelab" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PlayerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PlayerTest" />
         <item itemvalue="JUnit.DeckTest" />
         <item itemvalue="JUnit.CardTest" />
         <item itemvalue="JUnit.GameTest.willSetWinner" />
         <item itemvalue="JUnit.CardTest.tenHasValue10" />
-        <item itemvalue="JUnit.CardTest.queenHasValue10" />
       </list>
     </recent_temporary>
   </component>
@@ -151,6 +150,24 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1428" height="267" key="GridCell.Tab.0.bottom" timestamp="1595586447597">
+      <screen x="1280" y="-702" width="2560" height="1349" />
+    </state>
+    <state width="1428" height="267" key="GridCell.Tab.0.bottom/0.23.1280.777/1280.-702.2560.1349@1280.-702.2560.1349" timestamp="1595586447597" />
+    <state width="1428" height="267" key="GridCell.Tab.0.center" timestamp="1595586447596">
+      <screen x="1280" y="-702" width="2560" height="1349" />
+    </state>
+    <state width="1428" height="267" key="GridCell.Tab.0.center/0.23.1280.777/1280.-702.2560.1349@1280.-702.2560.1349" timestamp="1595586447596" />
+    <state width="1428" height="267" key="GridCell.Tab.0.left" timestamp="1595586447595">
+      <screen x="1280" y="-702" width="2560" height="1349" />
+    </state>
+    <state width="1428" height="267" key="GridCell.Tab.0.left/0.23.1280.777/1280.-702.2560.1349@1280.-702.2560.1349" timestamp="1595586447595" />
+    <state width="1428" height="267" key="GridCell.Tab.0.right" timestamp="1595586447596">
+      <screen x="1280" y="-702" width="2560" height="1349" />
+    </state>
+    <state width="1428" height="267" key="GridCell.Tab.0.right/0.23.1280.777/1280.-702.2560.1349@1280.-702.2560.1349" timestamp="1595586447596" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
