@@ -29,5 +29,4 @@ public class Dealer extends Person {
         return this.gameCards.remove(0);
     }
 
-
 }
