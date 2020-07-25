@@ -34,23 +34,40 @@ public class Person {
         return this.handOfCards.size();
     }
 
-    public void receiveCard(Card card) {
-        this.handOfCards.add(card);
-        addToHandTotal(card);
+    public int countAces() {
+        int numberOfAces = 0;
+        for (Card card : this.handOfCards) {
+            if (card.getRank() == RankType.ACE) {
+                numberOfAces += 1;
+            }
+        }
+        return numberOfAces;
+    }
+
+    public void handleAcesIfBust() {
+        for (int i = 0; i < countAces(); ++i ) {
+            while (this.totalValueOfHand > 21) {
+                this.totalValueOfHand -= 10;
+            }
+        }
         if (this.totalValueOfHand > 21) {
             this.bust = true;
         }
+    }
+
+    public void receiveCard(Card card) {
+        this.handOfCards.add(card);
+        addToHandTotal(card);
+        handleAcesIfBust();
     }
 
     public void addToHandTotal(Card card) {
         this.totalValueOfHand += card.getValueOfCard();
     }
 
+
     public void changeStand(){
         this.stand = !this.stand;
     }
 
-    public void changeBust(){
-        this.bust = !this.bust;
-    }
 }

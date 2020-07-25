@@ -127,6 +127,7 @@ public class Game {
       while (!player.getStand() && !player.getBust()) {
         Card dealtCard = this.dealer.dealCard();
         player.receiveCard(dealtCard);
+        //handle ace
         //check if player wants more cards
       }
     }
@@ -134,6 +135,7 @@ public class Game {
 
   public ArrayList<Person> playGame() {
     handleBlackJack();
+//    handle ace
 //    check if players want more cards
     dealMoreCardsToPlayer();
     handleDealersTurn();

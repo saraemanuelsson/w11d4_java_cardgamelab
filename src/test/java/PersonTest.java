@@ -39,14 +39,6 @@ public class PersonTest {
     }
 
     @Test
-    public void willSetTotalOfHandTo0IfBust() {
-        person.receiveCard(card);
-        person.receiveCard(card);
-        person.receiveCard(card);
-        assertEquals(0, person.getTotalValueOfHand());
-    }
-
-    @Test
     public void startsAtStandFalse() {
         assertFalse(person.getStand());
     }
@@ -55,6 +47,27 @@ public class PersonTest {
     public void canChangeStand() {
         person.changeStand();
         assertTrue(person.getStand());
+    }
+
+    @Test
+    public void aceTurnsTo1IfBust() {
+        Card ace = new Card(SuitType.CLUBS, RankType.ACE);
+        Card five = new Card(SuitType.CLUBS, RankType.FIVE);
+        person.receiveCard(ace);
+        person.receiveCard(five);
+        person.receiveCard(card);
+        assertEquals(16, person.getTotalValueOfHand());
+    }
+
+    @Test
+    public void multipleAcesTurnsTo1IfBust() {
+        Card ace = new Card(SuitType.CLUBS, RankType.ACE);
+        Card five = new Card(SuitType.CLUBS, RankType.FIVE);
+        person.receiveCard(ace);
+        person.receiveCard(five);
+        person.receiveCard(card);
+        person.receiveCard(ace);
+        assertEquals(17, person.getTotalValueOfHand());
     }
 
 }
