@@ -3,13 +3,19 @@ import java.util.ArrayList;
 public class Person {
 
     private ArrayList<Card> handOfCards;
+    private int totalValueOfHand;
 
     public Person() {
         this.handOfCards = new ArrayList<Card>();
+        this.totalValueOfHand = 0;
     }
 
     public ArrayList<Card> getHandOfCards() {
         return this.handOfCards;
+    }
+
+    public int getTotalValueOfHand(){
+        return this.totalValueOfHand;
     }
 
     public int getNumberOfCards() {
@@ -18,13 +24,10 @@ public class Person {
 
     public void receiveCard(Card card) {
         this.handOfCards.add(card);
+        addToHandTotal(card);
     }
 
-    public int getTotalValueOfHand() {
-        int total = 0;
-        for (Card card : this.handOfCards) {
-            total += card.getValueOfCard();
-        }
-        return total;
+    public void addToHandTotal(Card card){
+        this.totalValueOfHand += card.getValueOfCard();
     }
 }

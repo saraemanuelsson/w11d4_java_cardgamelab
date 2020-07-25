@@ -45,6 +45,7 @@ public class Game {
 
   public void startGame() {
     this.dealer.shuffleGameCards();
+
     //burn first card
     this.dealer.dealCard();
 
@@ -56,7 +57,10 @@ public class Game {
       Card dealerCard = this.dealer.dealCard();
       this.dealer.receiveCard(dealerCard);
     }
-
   }
+
+//  public Person getWinner(){
+//    if()
+//  }
 
 }
