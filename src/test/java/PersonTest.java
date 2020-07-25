@@ -38,4 +38,12 @@ public class PersonTest {
         assertEquals(20, person.getTotalValueOfHand());
     }
 
+    @Test
+    public void willSetTotalOfHandTo0IfBust(){
+        person.receiveCard(card);
+        person.receiveCard(card);
+        person.receiveCard(card);
+        assertEquals(0, person.getTotalValueOfHand());
+    }
+
 }

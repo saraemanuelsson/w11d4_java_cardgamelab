@@ -25,6 +25,9 @@ public class Person {
     public void receiveCard(Card card) {
         this.handOfCards.add(card);
         addToHandTotal(card);
+        if (this.totalValueOfHand > 21) {
+            this.totalValueOfHand = 0;
+        }
     }
 
     public void addToHandTotal(Card card){

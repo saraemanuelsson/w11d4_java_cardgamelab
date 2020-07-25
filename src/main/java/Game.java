@@ -60,7 +60,9 @@ public class Game {
   }
 
 //  public Person getWinner(){
-//    if()
+//    for (Player player : this.players) {
+//      if(player.getTotalValueOfHand() > 21)
+//    }
 //  }
 
 }
