@@ -5,11 +5,13 @@ public class Game {
   private ArrayList<Player> players;
   private ArrayList<Deck> decks;
   private Dealer dealer;
+  private ArrayList<Person> winners;
 
   public Game() {
   this.players = new ArrayList<Player>();
   this.decks = new ArrayList<Deck>();
   this.dealer = new Dealer();
+  this.winners = new ArrayList<Person>();
   }
 
   public int getNumberOfPlayers(){
@@ -24,12 +26,16 @@ public class Game {
     return this.decks.size();
   }
 
-  public Dealer getDealer(){
+  public Dealer getDealer() {
     return this.dealer;
   }
 
-  public ArrayList<Player> getPlayers(){
+  public ArrayList<Player> getPlayers() {
     return this.players;
+  }
+
+  public ArrayList<Person> getWinners() {
+    return this.winners;
   }
 
   public void giveDecksToDealer(int numberOfDecks) {
@@ -59,6 +65,16 @@ public class Game {
     }
   }
 
+  public void getResult(){
+    for (Player player : this.players) {
+      if (player.getTotalValueOfHand() > this.dealer.getTotalValueOfHand() && !player.getBust()) {
+        winners.add(player);
+      } else {
+        winners.add(this.dealer);
+      }
+    }
+  }
+
   public Boolean blackJack(ArrayList<Card> hand) {
     int foundCards = 0;
     for (Card card : hand) {
@@ -68,37 +84,64 @@ public class Game {
         foundCards += 1;
       }
     }
-    if (foundCards == 3) {
+    if (foundCards == 3 && hand.size() == 2) {
       return true;
     }
     return false;
   }
 
-//  public ArrayList<Person> getResult(){
-//    ArrayList<Person> winners = new ArrayList<Person>();
-//
-//    if (blackJack(this.dealer.getHandOfCards())) {
-//      winners.add(this.dealer);
-//      return winners;
-//    }
-//
-//    //if blackjack: add winning player or just dealer
-//
-//    for (Player player : this.players) {
-//      if (player.getTotalValueOfHand() > this.dealer.getTotalValueOfHand()) {
-//        winners.add(player);
-//      } else {
-//        winners.add(this.dealer);
-//      }
-//    }
-//
-//    return winners;
-//  }
+  public void handleBlackJack() {
 
-//  public void playGame(){
-//    //deal cards unless stand change to true or go bust
-//    //stand will change if player says so, game will handle dealer
-//    //while loop to handle the continous dealing? While player.stand = false
-//  }
+    if (blackJack(this.dealer.getHandOfCards())) {
+      this.winners.add(this.dealer);
+
+    } else {
+      for (Player player : this.players) {
+        if (blackJack(player.getHandOfCards())) {
+          this.winners.add(player);
+          player.changeStand();
+        }
+      }
+    }
+  }
+
+  public void handleDealersTurn() {
+    while (this.dealer.getTotalValueOfHand() <= 16) {
+      Card dealerCard = this.dealer.dealCard();
+      this.dealer.receiveCard(dealerCard);
+    }
+  }
+
+  public void handleDealerBust() {
+    if (this.dealer.getBust()) {
+      for (Player player : this.players) {
+        if (!player.getBust()) {
+          this.winners.add(player);
+        }
+      }
+    }
+  }
+
+  public void dealMoreCardsToPlayer() {
+    for (Player player : this.players) {
+      while (!player.getStand() && !player.getBust()) {
+        Card dealtCard = this.dealer.dealCard();
+        player.receiveCard(dealtCard);
+        //check if player wants more cards
+      }
+    }
+  }
+
+  public ArrayList<Person> playGame() {
+    handleBlackJack();
+//    check if players want more cards
+    dealMoreCardsToPlayer();
+    handleDealersTurn();
+    handleDealerBust();
+    if (this.winners.size() == 0) {
+      getResult();
+    }
+    return this.winners;
+  }
 
 }
