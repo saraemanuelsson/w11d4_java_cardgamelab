@@ -1,7 +1,10 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class GameTest {
 
@@ -48,17 +51,37 @@ public class GameTest {
     }
 
     @Test
-    public void canGetResult(){
+    public void canGetBlackJack() {
         Card jack = new Card(SuitType.SPADES, RankType.JACK);
-        Card nine = new Card(SuitType.HEARTS, RankType.NINE);
-        Card seven = new Card(SuitType.CLUBS, RankType.SEVEN);
-        game.getPlayers().get(0).receiveCard(jack);
-        game.getPlayers().get(0).receiveCard(nine);
-        game.getDealer().receiveCard(nine);
-        game.getDealer().receiveCard(seven);
-        assertEquals(game.getPlayers(), game.getResult());
+        Card ace = new Card(SuitType.CLUBS, RankType.ACE);
+        ArrayList<Card> hand = new ArrayList<Card>();
+        hand.add(jack);
+        hand.add(ace);
+        assertEquals(true, game.blackJack(hand));
     }
 
+    @Test
+    public void wontBlackJackIfNoAce() {
+        Card jack = new Card(SuitType.SPADES, RankType.JACK);
+        Card ace = new Card(SuitType.CLUBS, RankType.QUEEN);
+        ArrayList<Card> hand = new ArrayList<Card>();
+        hand.add(jack);
+        hand.add(ace);
+        assertEquals(false, game.blackJack(hand));
+    }
+
+//    @Test
+//    public void canGetResult(){
+//        Card jack = new Card(SuitType.SPADES, RankType.JACK);
+//        Card nine = new Card(SuitType.HEARTS, RankType.NINE);
+//        Card seven = new Card(SuitType.CLUBS, RankType.SEVEN);
+//        game.getPlayers().get(0).receiveCard(jack);
+//        game.getPlayers().get(0).receiveCard(nine);
+//        game.getDealer().receiveCard(nine);
+//        game.getDealer().receiveCard(seven);
+//        assertEquals(game.getPlayers(), game.getResult());
+//    }
+//
 //    @Test
 //    public void canPlayGame(){
 //        assertEquals();

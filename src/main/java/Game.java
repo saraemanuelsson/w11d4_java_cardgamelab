@@ -59,18 +59,46 @@ public class Game {
     }
   }
 
-  public ArrayList<Person> getResult(){
-    ArrayList<Person> winners = new ArrayList<Person>();
-
-    for (Player player : this.players) {
-      if (player.getTotalValueOfHand() > this.dealer.getTotalValueOfHand()) {
-        winners.add(player);
-      } else {
-        winners.add(this.dealer);
+  public Boolean blackJack(ArrayList<Card> hand) {
+    int foundCards = 0;
+    for (Card card : hand) {
+      if(card.getRank() == RankType.ACE) {
+        foundCards += 2;
+      } else if (card.getValueOfCard() == 10) {
+        foundCards += 1;
       }
     }
-
-    return winners;
+    if (foundCards == 3) {
+      return true;
+    }
+    return false;
   }
+
+//  public ArrayList<Person> getResult(){
+//    ArrayList<Person> winners = new ArrayList<Person>();
+//
+//    if (blackJack(this.dealer.getHandOfCards())) {
+//      winners.add(this.dealer);
+//      return winners;
+//    }
+//
+//    //if blackjack: add winning player or just dealer
+//
+//    for (Player player : this.players) {
+//      if (player.getTotalValueOfHand() > this.dealer.getTotalValueOfHand()) {
+//        winners.add(player);
+//      } else {
+//        winners.add(this.dealer);
+//      }
+//    }
+//
+//    return winners;
+//  }
+
+//  public void playGame(){
+//    //deal cards unless stand change to true or go bust
+//    //stand will change if player says so, game will handle dealer
+//    //while loop to handle the continous dealing? While player.stand = false
+//  }
 
 }

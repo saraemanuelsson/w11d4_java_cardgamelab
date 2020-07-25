@@ -21,9 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="571d500e-350b-44ec-b2f7-815ef3616ed9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GameTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PersonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PersonTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +68,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PersonTest.startsAtStandFalse">
+  <component name="RunManager" selected="JUnit.GameTest">
     <configuration name="GameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="w11d4_java_cardgamelab" />
       <option name="PACKAGE_NAME" value="" />
@@ -79,11 +78,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameTest.canGiveDecksToDealer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameTest.canGetBlackJack" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="w11d4_java_cardgamelab" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="GameTest" />
-      <option name="METHOD_NAME" value="canGiveDecksToDealer" />
+      <option name="METHOD_NAME" value="canGetBlackJack" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -120,11 +119,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameTest" />
+        <item itemvalue="JUnit.GameTest.canGetBlackJack" />
         <item itemvalue="JUnit.PersonTest.startsAtStandFalse" />
         <item itemvalue="JUnit.PersonTest" />
-        <item itemvalue="JUnit.GameTest" />
         <item itemvalue="JUnit.GameTest.canStartGame" />
-        <item itemvalue="JUnit.GameTest.canGiveDecksToDealer" />
       </list>
     </recent_temporary>
   </component>
@@ -162,46 +161,50 @@
       <screen x="1280" y="-702" width="2560" height="1349" />
     </state>
     <state x="1989" y="-223" key="#com.intellij.ide.util.MemberChooser/0.23.1280.777/1280.-702.2560.1349@1280.-702.2560.1349" timestamp="1595594425609" />
-    <state width="1883" height="205" key="GridCell.Tab.0.bottom" timestamp="1595674415994">
+    <state width="1883" height="278" key="GridCell.Tab.0.bottom" timestamp="1595677454760">
       <screen x="1280" y="-702" width="2560" height="1349" />
     </state>
     <state width="1566" height="205" key="GridCell.Tab.0.bottom/0.23.1280.722/1280.-702.2560.1417@1280.-702.2560.1417" timestamp="1595670851837" />
     <state width="1048" height="175" key="GridCell.Tab.0.bottom/0.23.1280.777/1280.-702.2560.1349@0.23.1280.777" timestamp="1595590692071" />
-    <state width="1883" height="205" key="GridCell.Tab.0.bottom/0.23.1280.777/1280.-702.2560.1349@1280.-702.2560.1349" timestamp="1595674415994" />
-    <state width="1883" height="205" key="GridCell.Tab.0.center" timestamp="1595674415991">
+    <state width="1883" height="278" key="GridCell.Tab.0.bottom/0.23.1280.777/1280.-702.2560.1349@1280.-702.2560.1349" timestamp="1595677454760" />
+    <state width="1883" height="278" key="GridCell.Tab.0.center" timestamp="1595677454756">
       <screen x="1280" y="-702" width="2560" height="1349" />
     </state>
     <state width="1566" height="205" key="GridCell.Tab.0.center/0.23.1280.722/1280.-702.2560.1417@1280.-702.2560.1417" timestamp="1595670851742" />
     <state width="1048" height="175" key="GridCell.Tab.0.center/0.23.1280.777/1280.-702.2560.1349@0.23.1280.777" timestamp="1595590692067" />
-    <state width="1883" height="205" key="GridCell.Tab.0.center/0.23.1280.777/1280.-702.2560.1349@1280.-702.2560.1349" timestamp="1595674415991" />
-    <state width="1883" height="205" key="GridCell.Tab.0.left" timestamp="1595674415971">
+    <state width="1883" height="278" key="GridCell.Tab.0.center/0.23.1280.777/1280.-702.2560.1349@1280.-702.2560.1349" timestamp="1595677454756" />
+    <state width="1883" height="278" key="GridCell.Tab.0.left" timestamp="1595677454755">
       <screen x="1280" y="-702" width="2560" height="1349" />
     </state>
     <state width="1566" height="205" key="GridCell.Tab.0.left/0.23.1280.722/1280.-702.2560.1417@1280.-702.2560.1417" timestamp="1595670851730" />
     <state width="1048" height="175" key="GridCell.Tab.0.left/0.23.1280.777/1280.-702.2560.1349@0.23.1280.777" timestamp="1595590692065" />
-    <state width="1883" height="205" key="GridCell.Tab.0.left/0.23.1280.777/1280.-702.2560.1349@1280.-702.2560.1349" timestamp="1595674415971" />
-    <state width="1883" height="205" key="GridCell.Tab.0.right" timestamp="1595674415993">
+    <state width="1883" height="278" key="GridCell.Tab.0.left/0.23.1280.777/1280.-702.2560.1349@1280.-702.2560.1349" timestamp="1595677454755" />
+    <state width="1883" height="278" key="GridCell.Tab.0.right" timestamp="1595677454758">
       <screen x="1280" y="-702" width="2560" height="1349" />
     </state>
     <state width="1566" height="205" key="GridCell.Tab.0.right/0.23.1280.722/1280.-702.2560.1417@1280.-702.2560.1417" timestamp="1595670851837" />
     <state width="1048" height="175" key="GridCell.Tab.0.right/0.23.1280.777/1280.-702.2560.1349@0.23.1280.777" timestamp="1595590692069" />
-    <state width="1883" height="205" key="GridCell.Tab.0.right/0.23.1280.777/1280.-702.2560.1349@1280.-702.2560.1349" timestamp="1595674415993" />
-    <state width="1566" height="368" key="GridCell.Tab.1.bottom" timestamp="1595670586369">
-      <screen x="1280" y="-702" width="2560" height="1417" />
+    <state width="1883" height="278" key="GridCell.Tab.0.right/0.23.1280.777/1280.-702.2560.1349@1280.-702.2560.1349" timestamp="1595677454758" />
+    <state width="1883" height="428" key="GridCell.Tab.1.bottom" timestamp="1595676529582">
+      <screen x="1280" y="-702" width="2560" height="1349" />
     </state>
     <state width="1566" height="368" key="GridCell.Tab.1.bottom/0.23.1280.722/1280.-702.2560.1417@1280.-702.2560.1417" timestamp="1595670586369" />
-    <state width="1566" height="368" key="GridCell.Tab.1.center" timestamp="1595670586366">
-      <screen x="1280" y="-702" width="2560" height="1417" />
+    <state width="1883" height="428" key="GridCell.Tab.1.bottom/0.23.1280.777/1280.-702.2560.1349@1280.-702.2560.1349" timestamp="1595676529582" />
+    <state width="1883" height="428" key="GridCell.Tab.1.center" timestamp="1595676529581">
+      <screen x="1280" y="-702" width="2560" height="1349" />
     </state>
     <state width="1566" height="368" key="GridCell.Tab.1.center/0.23.1280.722/1280.-702.2560.1417@1280.-702.2560.1417" timestamp="1595670586366" />
-    <state width="1566" height="368" key="GridCell.Tab.1.left" timestamp="1595670586366">
-      <screen x="1280" y="-702" width="2560" height="1417" />
+    <state width="1883" height="428" key="GridCell.Tab.1.center/0.23.1280.777/1280.-702.2560.1349@1280.-702.2560.1349" timestamp="1595676529581" />
+    <state width="1883" height="428" key="GridCell.Tab.1.left" timestamp="1595676529578">
+      <screen x="1280" y="-702" width="2560" height="1349" />
     </state>
     <state width="1566" height="368" key="GridCell.Tab.1.left/0.23.1280.722/1280.-702.2560.1417@1280.-702.2560.1417" timestamp="1595670586366" />
-    <state width="1566" height="368" key="GridCell.Tab.1.right" timestamp="1595670586367">
-      <screen x="1280" y="-702" width="2560" height="1417" />
+    <state width="1883" height="428" key="GridCell.Tab.1.left/0.23.1280.777/1280.-702.2560.1349@1280.-702.2560.1349" timestamp="1595676529578" />
+    <state width="1883" height="428" key="GridCell.Tab.1.right" timestamp="1595676529581">
+      <screen x="1280" y="-702" width="2560" height="1349" />
     </state>
     <state width="1566" height="368" key="GridCell.Tab.1.right/0.23.1280.722/1280.-702.2560.1417@1280.-702.2560.1417" timestamp="1595670586367" />
+    <state width="1883" height="428" key="GridCell.Tab.1.right/0.23.1280.777/1280.-702.2560.1349@1280.-702.2560.1349" timestamp="1595676529581" />
     <state x="1815" y="-305" width="863" height="617" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1595670244326">
       <screen x="1280" y="-702" width="2560" height="1417" />
     </state>
