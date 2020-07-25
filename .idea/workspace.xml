@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="571d500e-350b-44ec-b2f7-815ef3616ed9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dealer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GameTest.java" afterDir="false" />
     </list>
@@ -79,26 +78,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DealerTest.canDealCard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="w11d4_java_cardgamelab" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DealerTest" />
-      <option name="METHOD_NAME" value="canDealCard" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DealerTest.canPopulateGameCards" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="w11d4_java_cardgamelab" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DealerTest" />
-      <option name="METHOD_NAME" value="canPopulateGameCards" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="GameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="w11d4_java_cardgamelab" />
       <option name="PACKAGE_NAME" value="" />
@@ -118,13 +97,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GameTest.canGiveDecksToDealer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="w11d4_java_cardgamelab" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GameTest" />
+      <option name="METHOD_NAME" value="canGiveDecksToDealer" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameTest.canStartGame" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="w11d4_java_cardgamelab" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GameTest" />
+      <option name="METHOD_NAME" value="canStartGame" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.GameTest" />
+        <item itemvalue="JUnit.GameTest.canStartGame" />
+        <item itemvalue="JUnit.GameTest.canGiveDecksToDealer" />
         <item itemvalue="JUnit.GameTest.canAddDecks" />
         <item itemvalue="JUnit.DealerTest" />
-        <item itemvalue="JUnit.DealerTest.canPopulateGameCards" />
-        <item itemvalue="JUnit.DealerTest.canDealCard" />
       </list>
     </recent_temporary>
   </component>
@@ -162,25 +161,49 @@
       <screen x="1280" y="-702" width="2560" height="1349" />
     </state>
     <state x="1989" y="-223" key="#com.intellij.ide.util.MemberChooser/0.23.1280.777/1280.-702.2560.1349@1280.-702.2560.1349" timestamp="1595594425609" />
-    <state width="1534" height="175" key="GridCell.Tab.0.bottom" timestamp="1595598616321">
-      <screen x="1280" y="-702" width="2560" height="1349" />
+    <state width="1566" height="368" key="GridCell.Tab.0.bottom" timestamp="1595670190423">
+      <screen x="1280" y="-702" width="2560" height="1417" />
     </state>
+    <state width="1566" height="368" key="GridCell.Tab.0.bottom/0.23.1280.722/1280.-702.2560.1417@1280.-702.2560.1417" timestamp="1595670190423" />
     <state width="1048" height="175" key="GridCell.Tab.0.bottom/0.23.1280.777/1280.-702.2560.1349@0.23.1280.777" timestamp="1595590692071" />
-    <state width="1534" height="175" key="GridCell.Tab.0.bottom/0.23.1280.777/1280.-702.2560.1349@1280.-702.2560.1349" timestamp="1595598616321" />
-    <state width="1534" height="175" key="GridCell.Tab.0.center" timestamp="1595598616320">
-      <screen x="1280" y="-702" width="2560" height="1349" />
+    <state width="1534" height="175" key="GridCell.Tab.0.bottom/0.23.1280.777/1280.-702.2560.1349@1280.-702.2560.1349" timestamp="1595600768547" />
+    <state width="1566" height="368" key="GridCell.Tab.0.center" timestamp="1595670190422">
+      <screen x="1280" y="-702" width="2560" height="1417" />
     </state>
+    <state width="1566" height="368" key="GridCell.Tab.0.center/0.23.1280.722/1280.-702.2560.1417@1280.-702.2560.1417" timestamp="1595670190422" />
     <state width="1048" height="175" key="GridCell.Tab.0.center/0.23.1280.777/1280.-702.2560.1349@0.23.1280.777" timestamp="1595590692067" />
-    <state width="1534" height="175" key="GridCell.Tab.0.center/0.23.1280.777/1280.-702.2560.1349@1280.-702.2560.1349" timestamp="1595598616320" />
-    <state width="1534" height="175" key="GridCell.Tab.0.left" timestamp="1595598616320">
-      <screen x="1280" y="-702" width="2560" height="1349" />
+    <state width="1534" height="175" key="GridCell.Tab.0.center/0.23.1280.777/1280.-702.2560.1349@1280.-702.2560.1349" timestamp="1595600768545" />
+    <state width="1566" height="368" key="GridCell.Tab.0.left" timestamp="1595670190421">
+      <screen x="1280" y="-702" width="2560" height="1417" />
     </state>
+    <state width="1566" height="368" key="GridCell.Tab.0.left/0.23.1280.722/1280.-702.2560.1417@1280.-702.2560.1417" timestamp="1595670190421" />
     <state width="1048" height="175" key="GridCell.Tab.0.left/0.23.1280.777/1280.-702.2560.1349@0.23.1280.777" timestamp="1595590692065" />
-    <state width="1534" height="175" key="GridCell.Tab.0.left/0.23.1280.777/1280.-702.2560.1349@1280.-702.2560.1349" timestamp="1595598616320" />
-    <state width="1534" height="175" key="GridCell.Tab.0.right" timestamp="1595598616321">
-      <screen x="1280" y="-702" width="2560" height="1349" />
+    <state width="1534" height="175" key="GridCell.Tab.0.left/0.23.1280.777/1280.-702.2560.1349@1280.-702.2560.1349" timestamp="1595600768544" />
+    <state width="1566" height="368" key="GridCell.Tab.0.right" timestamp="1595670190423">
+      <screen x="1280" y="-702" width="2560" height="1417" />
     </state>
+    <state width="1566" height="368" key="GridCell.Tab.0.right/0.23.1280.722/1280.-702.2560.1417@1280.-702.2560.1417" timestamp="1595670190423" />
     <state width="1048" height="175" key="GridCell.Tab.0.right/0.23.1280.777/1280.-702.2560.1349@0.23.1280.777" timestamp="1595590692069" />
-    <state width="1534" height="175" key="GridCell.Tab.0.right/0.23.1280.777/1280.-702.2560.1349@1280.-702.2560.1349" timestamp="1595598616321" />
+    <state width="1534" height="175" key="GridCell.Tab.0.right/0.23.1280.777/1280.-702.2560.1349@1280.-702.2560.1349" timestamp="1595600768546" />
+    <state width="1566" height="368" key="GridCell.Tab.1.bottom" timestamp="1595670225561">
+      <screen x="1280" y="-702" width="2560" height="1417" />
+    </state>
+    <state width="1566" height="368" key="GridCell.Tab.1.bottom/0.23.1280.722/1280.-702.2560.1417@1280.-702.2560.1417" timestamp="1595670225561" />
+    <state width="1566" height="368" key="GridCell.Tab.1.center" timestamp="1595670225560">
+      <screen x="1280" y="-702" width="2560" height="1417" />
+    </state>
+    <state width="1566" height="368" key="GridCell.Tab.1.center/0.23.1280.722/1280.-702.2560.1417@1280.-702.2560.1417" timestamp="1595670225560" />
+    <state width="1566" height="368" key="GridCell.Tab.1.left" timestamp="1595670225559">
+      <screen x="1280" y="-702" width="2560" height="1417" />
+    </state>
+    <state width="1566" height="368" key="GridCell.Tab.1.left/0.23.1280.722/1280.-702.2560.1417@1280.-702.2560.1417" timestamp="1595670225559" />
+    <state width="1566" height="368" key="GridCell.Tab.1.right" timestamp="1595670225560">
+      <screen x="1280" y="-702" width="2560" height="1417" />
+    </state>
+    <state width="1566" height="368" key="GridCell.Tab.1.right/0.23.1280.722/1280.-702.2560.1417@1280.-702.2560.1417" timestamp="1595670225560" />
+    <state x="1815" y="-305" width="863" height="617" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1595670244326">
+      <screen x="1280" y="-702" width="2560" height="1417" />
+    </state>
+    <state x="1815" y="-305" width="863" height="617" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.23.1280.722/1280.-702.2560.1417@1280.-702.2560.1417" timestamp="1595670244326" />
   </component>
 </project>

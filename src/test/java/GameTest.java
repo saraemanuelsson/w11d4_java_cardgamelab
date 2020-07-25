@@ -9,15 +9,15 @@ public class GameTest {
 
     private Player player;
     private Game game;
-    private Dealer dealer;
-    private Deck deck;
+//    private Dealer dealer;
+//    private Deck deck;
 
     @Before
     public void before() {
        player = new Player("Alice");
-       dealer = new Dealer();
-       deck = new Deck();
-       deck.populateDeck();
+//       dealer = new Dealer();
+//       deck = new Deck();
+//       deck.populateDeck();
        game = new Game();
        game.addPlayer(player);
     }
@@ -35,18 +35,18 @@ public class GameTest {
     }
 
     @Test
-    public void canAddDecks(){
-        ArrayList<Deck> decks = game.getDecks(3);
-        dealer.populateGameCards(decks);
-        assertEquals(156, dealer.getSizeOfGameCards());
+    public void canGiveDecksToDealer(){
+        game.giveDecksToDealer(3);
+        assertEquals(156, game.getDealer().getSizeOfGameCards());
     }
 
-//    @Test
-//    public void canStartGame(){
-//        game.startGame(3);
-//        assertEquals(150, dealer.getSizeOfGameCards());
-//        assertEquals(2, player.getNumberOfCards());
-//        assertEquals(2, dealer.getNumberOfCards());
-//    }
+    @Test
+    public void canStartGame(){
+        game.giveDecksToDealer(3);
+        game.startGame();
+        assertEquals(151, game.getDealer().getSizeOfGameCards());
+        assertEquals(2, game.getPlayers().get(0).getNumberOfCards());
+        assertEquals(2, game.getDealer().getNumberOfCards());
+    }
 
 }

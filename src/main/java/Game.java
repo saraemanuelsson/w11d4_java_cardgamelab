@@ -1,14 +1,15 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Game {
 
   private ArrayList<Player> players;
   private ArrayList<Deck> decks;
+  private Dealer dealer;
 
   public Game() {
   this.players = new ArrayList<Player>();
   this.decks = new ArrayList<Deck>();
+  this.dealer = new Dealer();
   }
 
   public int getNumberOfPlayers(){
@@ -23,7 +24,15 @@ public class Game {
     return this.decks.size();
   }
 
-  public ArrayList<Deck> getDecks(int numberOfDecks) {
+  public Dealer getDealer(){
+    return this.dealer;
+  }
+
+  public ArrayList<Player> getPlayers(){
+    return this.players;
+  }
+
+  public void giveDecksToDealer(int numberOfDecks) {
     Deck deck = new Deck();
     deck.populateDeck();
 
@@ -31,13 +40,23 @@ public class Game {
       this.decks.add(deck);
     }
 
-    return this.decks;
+    this.dealer.populateGameCards(this.decks);
   }
 
-//  public void startGame() {
-//
-//    // give arraylist of decks to dealer which will populate cards
-//    // deal 2 cards to each player and burn 2
-//  }
+  public void startGame() {
+    this.dealer.shuffleGameCards();
+    //burn first card
+    this.dealer.dealCard();
+
+    for (int i = 0; i < 2; ++i) {
+      for (Player player : this.players) {
+        Card dealtCard = this.dealer.dealCard();
+        player.receiveCard(dealtCard);
+      }
+      Card dealerCard = this.dealer.dealCard();
+      this.dealer.receiveCard(dealerCard);
+    }
+
+  }
 
 }
