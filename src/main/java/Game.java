@@ -59,10 +59,18 @@ public class Game {
     }
   }
 
-//  public Person getWinner(){
-//    for (Player player : this.players) {
-//      if(player.getTotalValueOfHand() > 21)
-//    }
-//  }
+  public ArrayList<Person> getResult(){
+    ArrayList<Person> winners = new ArrayList<Person>();
+
+    for (Player player : this.players) {
+      if (player.getTotalValueOfHand() > this.dealer.getTotalValueOfHand()) {
+        winners.add(player);
+      } else {
+        winners.add(this.dealer);
+      }
+    }
+
+    return winners;
+  }
 
 }

@@ -47,16 +47,16 @@ public class GameTest {
         assertEquals(2, game.getDealer().getNumberOfCards());
     }
 
-//    @Test
-//    public void canGetWinner(){
-//        Card jack = new Card(SuitType.SPADES, RankType.JACK);
-//        Card nine = new Card(SuitType.HEARTS, RankType.NINE);
-//        Card seven = new Card(SuitType.CLUBS, RankType.SEVEN);
-//        game.getPlayers().get(0).receiveCard(jack);
-//        game.getPlayers().get(0).receiveCard(nine);
-//        game.getDealer().receiveCard(nine);
-//        game.getDealer().receiveCard(seven);
-//        assertEquals(game.getPlayers().get(0), game.getWinner());
-//    }
+    @Test
+    public void canGetResult(){
+        Card jack = new Card(SuitType.SPADES, RankType.JACK);
+        Card nine = new Card(SuitType.HEARTS, RankType.NINE);
+        Card seven = new Card(SuitType.CLUBS, RankType.SEVEN);
+        game.getPlayers().get(0).receiveCard(jack);
+        game.getPlayers().get(0).receiveCard(nine);
+        game.getDealer().receiveCard(nine);
+        game.getDealer().receiveCard(seven);
+        assertEquals(game.getPlayers(), game.getResult());
+    }
 
 }
