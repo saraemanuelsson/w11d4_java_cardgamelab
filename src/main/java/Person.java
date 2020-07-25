@@ -4,18 +4,24 @@ public class Person {
 
     private ArrayList<Card> handOfCards;
     private int totalValueOfHand;
+    private Boolean stand;
 
     public Person() {
         this.handOfCards = new ArrayList<Card>();
         this.totalValueOfHand = 0;
+        this.stand = false;
     }
 
     public ArrayList<Card> getHandOfCards() {
         return this.handOfCards;
     }
 
-    public int getTotalValueOfHand(){
+    public int getTotalValueOfHand() {
         return this.totalValueOfHand;
+    }
+
+    public Boolean getStand() {
+        return this.stand;
     }
 
     public int getNumberOfCards() {
@@ -30,7 +36,11 @@ public class Person {
         }
     }
 
-    public void addToHandTotal(Card card){
+    public void addToHandTotal(Card card) {
         this.totalValueOfHand += card.getValueOfCard();
+    }
+
+    public void changeStand(){
+        this.stand = !this.stand;
     }
 }

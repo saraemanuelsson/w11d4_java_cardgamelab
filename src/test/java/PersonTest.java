@@ -1,7 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class PersonTest {
 
@@ -15,7 +15,7 @@ public class PersonTest {
     }
 
     @Test
-    public void testStartsWithEmptyHand(){
+    public void testStartsWithEmptyHand() {
         assertEquals(0, person.getNumberOfCards());
     }
 
@@ -26,24 +26,35 @@ public class PersonTest {
     }
 
     @Test
-    public void canGetHandOfCards(){
+    public void canGetHandOfCards() {
         person.receiveCard(card);
         assertEquals(card, person.getHandOfCards().get(0));
     }
 
     @Test
-    public void canGetTotalValueOfHand(){
+    public void canGetTotalValueOfHand() {
         person.receiveCard(card);
         person.receiveCard(card);
         assertEquals(20, person.getTotalValueOfHand());
     }
 
     @Test
-    public void willSetTotalOfHandTo0IfBust(){
+    public void willSetTotalOfHandTo0IfBust() {
         person.receiveCard(card);
         person.receiveCard(card);
         person.receiveCard(card);
         assertEquals(0, person.getTotalValueOfHand());
+    }
+
+    @Test
+    public void startsAtStandFalse() {
+        assertFalse(person.getStand());
+    }
+
+    @Test
+    public void canChangeStand() {
+        person.changeStand();
+        assertTrue(person.getStand());
     }
 
 }
