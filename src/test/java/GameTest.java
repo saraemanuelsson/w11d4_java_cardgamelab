@@ -9,22 +9,17 @@ public class GameTest {
 
     private Player player;
     private Game game;
-//    private Dealer dealer;
-//    private Deck deck;
 
     @Before
     public void before() {
        player = new Player("Alice");
-//       dealer = new Dealer();
-//       deck = new Deck();
-//       deck.populateDeck();
-       game = new Game();
+       game = new Game(3);
        game.addPlayer(player);
     }
 
     @Test
     public void startsWithNoPlayers() {
-        Game newGame = new Game();
+        Game newGame = new Game(3);
         assertEquals(0, newGame.getNumberOfPlayers());
     }
 
@@ -36,13 +31,12 @@ public class GameTest {
 
     @Test
     public void canGiveDecksToDealer() {
-        game.giveDecksToDealer(3);
+        game.giveDecksToDealer();
         assertEquals(156, game.getDealer().getSizeOfGameCards());
     }
 
     @Test
     public void canStartGame() {
-        game.giveDecksToDealer(3);
         game.startGame();
         assertEquals(151, game.getDealer().getSizeOfGameCards());
         assertEquals(2, game.getPlayers().get(0).getNumberOfCards());
@@ -129,7 +123,6 @@ public class GameTest {
     public void canDealMoreCardsToPlayerNotOnStand() {
         Player player2 = new Player("Bob");
         game.addPlayer(player2);
-        game.giveDecksToDealer(3);
         game.startGame();
         game.getPlayers().get(0).changeStand();
         game.dealMoreCardsToPlayer();
@@ -139,7 +132,6 @@ public class GameTest {
 
     @Test
     public void canHandleDealersTurnUnder16() {
-        game.giveDecksToDealer(3);
         game.startGame();
         Card seven = new Card(SuitType.CLUBS, RankType.SEVEN);
         game.getDealer().receiveCard(seven);
@@ -170,7 +162,7 @@ public class GameTest {
 
     @Test
     public void canPlayGame(){
-        game.giveDecksToDealer(3);
+        game.giveDecksToDealer();
         Card jack = new Card(SuitType.SPADES, RankType.JACK);
         Card nine = new Card(SuitType.HEARTS, RankType.NINE);
         Card seven = new Card(SuitType.CLUBS, RankType.SEVEN);

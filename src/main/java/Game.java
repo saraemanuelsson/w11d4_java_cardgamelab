@@ -3,15 +3,15 @@ import java.util.ArrayList;
 public class Game {
 
   private ArrayList<Player> players;
-  private ArrayList<Deck> decks;
   private Dealer dealer;
   private ArrayList<Person> winners;
+  private int numberOfDecks;
 
-  public Game() {
+  public Game(int numberOfDecks) {
   this.players = new ArrayList<Player>();
-  this.decks = new ArrayList<Deck>();
   this.dealer = new Dealer();
   this.winners = new ArrayList<Person>();
+  this.numberOfDecks = numberOfDecks;
   }
 
   public int getNumberOfPlayers(){
@@ -20,10 +20,6 @@ public class Game {
 
   public void addPlayer(Player player) {
     this.players.add(player);
-  }
-
-  public int getNumberOfDecks() {
-    return this.decks.size();
   }
 
   public Dealer getDealer() {
@@ -38,18 +34,21 @@ public class Game {
     return this.winners;
   }
 
-  public void giveDecksToDealer(int numberOfDecks) {
+  public void giveDecksToDealer() {
     Deck deck = new Deck();
     deck.populateDeck();
 
-    for (int i = 0; i < numberOfDecks; ++i){
-      this.decks.add(deck);
+    ArrayList<Deck> decksForDealer = new ArrayList<Deck>();
+
+    for (int i = 0; i < this.numberOfDecks; ++i){
+      decksForDealer.add(deck);
     }
 
-    this.dealer.populateGameCards(this.decks);
+    this.dealer.populateGameCards(decksForDealer);
   }
 
   public void startGame() {
+    giveDecksToDealer();
     this.dealer.shuffleGameCards();
 
     //burn first card
