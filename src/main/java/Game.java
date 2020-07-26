@@ -75,16 +75,8 @@ public class Game {
     }
   }
 
-  public Boolean blackJack(ArrayList<Card> hand) {
-    int foundCards = 0;
-    for (Card card : hand) {
-      if(card.getRank() == RankType.ACE) {
-        foundCards += 2;
-      } else if (card.getValueOfCard() == 10) {
-        foundCards += 1;
-      }
-    }
-    if (foundCards == 3 && hand.size() == 2) {
+  public Boolean blackJack(Person person) {
+    if (person.getTotalValueOfHand() == 21 && person.getNumberOfCards() == 2) {
       return true;
     }
     return false;
@@ -92,12 +84,11 @@ public class Game {
 
   public void handleBlackJack() {
 
-    if (blackJack(this.dealer.getHandOfCards())) {
+    if (blackJack(this.dealer)) {
       this.winners.add(this.dealer);
-
     } else {
       for (Player player : this.players) {
-        if (blackJack(player.getHandOfCards())) {
+        if (blackJack(player)) {
           this.winners.add(player);
           player.changeStand();
         }

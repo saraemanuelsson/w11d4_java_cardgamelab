@@ -54,19 +54,19 @@ public class GameTest {
         Card jack = new Card(SuitType.SPADES, RankType.JACK);
         Card ace = new Card(SuitType.CLUBS, RankType.ACE);
         ArrayList<Card> hand = new ArrayList<Card>();
-        hand.add(jack);
-        hand.add(ace);
-        assertEquals(true, game.blackJack(hand));
+        game.getDealer().receiveCard(jack);
+        game.getDealer().receiveCard(ace);
+        assertEquals(true, game.blackJack(game.getDealer()));
     }
 
     @Test
     public void wontBlackJackIfNoAce() {
         Card jack = new Card(SuitType.SPADES, RankType.JACK);
-        Card ace = new Card(SuitType.CLUBS, RankType.QUEEN);
+        Card queen = new Card(SuitType.CLUBS, RankType.QUEEN);
         ArrayList<Card> hand = new ArrayList<Card>();
-        hand.add(jack);
-        hand.add(ace);
-        assertEquals(false, game.blackJack(hand));
+        game.getDealer().receiveCard(jack);
+        game.getDealer().receiveCard(queen);
+        assertEquals(false, game.blackJack(game.getDealer()));
     }
 
     @Test
